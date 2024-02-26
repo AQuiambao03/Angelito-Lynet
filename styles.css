@@ -1,0 +1,276 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	scroll-behavior: smooth;
+
+	font-family: "Noto Serif", serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-variation-settings: "wdth" 100;
+}
+
+body{
+	background-color: #666362;
+}
+
+.navbar-brand{
+	transition: all 0.5s;
+}
+
+.navbar-brand:hover{
+	transition: all 0.5s;
+	letter-spacing: 2px !important;
+}
+
+#navBtn li a{
+	transition: all 0.5s;
+}
+
+#navBtn li a:hover{
+	transition: all 0.5s;
+	border-bottom: 2px solid white;
+	letter-spacing: 1px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+	background-color: transparent;
+	border-bottom: 2px solid white;
+	letter-spacing: 1px;
+}
+
+.btn-outline-light:hover{
+	background-color: rgba(255,255,255,0.15);
+}
+
+.footer{
+	min-height: 0px !important;
+}
+
+.jumbotron{
+	min-height: 100vh;
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+
+#details{
+	min-height: 100vh;
+}
+
+#gallery{
+	min-height: 100vh;
+}
+
+#share{
+	min-height: 100vh;
+}
+
+/*Effects and animations*/
+.hero-banner{
+	/* The image used */
+	background-image: url("images/hero_banner.jpg");
+
+	/* Set a specific height */
+	min-height: 100vh;
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bg-parallax{
+	/* The image used */
+	background-image: url("images/bg_parallax.jpg");
+
+	/* Set a specific height */
+	min-height: 100vh;
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.inputDnD {
+  .form-control-file {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 6em;
+    outline: none;
+    visibility: hidden;
+    cursor: pointer;
+    background-color: #c61c23;
+    box-shadow: 0 0 5px solid currentColor;
+    &:before {
+      content: attr(data-title);
+      position: absolute;
+      top: 0.5em;
+      left: 0;
+      width: 100%;
+      min-height: 6em;
+      line-height: 2em;
+      padding-top: 1.5em;
+      opacity: 1;
+      visibility: visible;
+      text-align: center;
+      border: 0.25em dashed currentColor;
+      transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+      overflow: hidden;
+    }
+    &:hover {
+      &:before {
+        border-style: solid;
+        box-shadow: inset 0px 0px 0px 0.25em currentColor;
+      }
+    }
+  }
+}
+
+/*media queries*/
+@media (min-width: 320px){
+	.logo{
+		max-height: 75%;
+		max-width: 75%;
+		position:relative;
+	}
+
+	#welcome h1{
+		font-size: 56px;
+	}
+	
+	#welcome p{
+		font-size: 16px;
+	}
+
+	#details div h1{
+ 		text-align: center;
+ 		font-size: 30px;
+ 	}
+
+ 	#details div > h3{
+ 		font-size: 24px;
+ 	}
+
+ 	#gallery div h1{
+ 		font-size: 30px;
+ 		letter-spacing: 5px;
+ 	}
+
+ 	#share div h1{
+		font-size: 32px;
+	}
+
+	.footer .row > div{
+		text-align: center;
+	}
+}
+
+@media (min-width: 576px){
+	.logo{
+		max-height: 75%;
+		max-width: 75%;
+		position:relative;
+	}
+
+	#welcome h1{
+		font-size: 60px;
+	}
+
+	#welcome p{
+		font-size: 18px;
+	}
+
+	#details div h1{
+ 		text-align: center;
+ 		font-size: 36px;
+ 	}
+
+ 	#details div > h3{
+ 		font-size: 30px;
+ 	}
+
+ 	#gallery div h1{
+ 		font-size: 40px;
+ 		letter-spacing: 5px;
+ 	}
+
+ 	#share div h1{
+		font-size: 50px;
+	}
+
+	.footer .row > div{
+		text-align: center;
+	}
+}
+
+@media (min-width: 768px){
+	.logo{
+		max-height: 75%;
+		max-width: 75%;
+		position:relative;
+	}
+
+	#welcome h1{
+		font-size: 64px;
+	}
+	#welcome p{
+		font-size: 20px;
+	}
+
+
+ 	#gallery div h1{
+ 		font-size: 60px;
+ 		letter-spacing: 8px;
+ 	}
+
+ 	#share div h1{
+		font-size: 32px;
+	}
+
+	.footer .row > div{
+		text-align: center;
+	}
+}
+
+@media (min-width: 992px){
+	.logo{
+		max-height: 75%;
+		max-width: 75%;
+		position:relative;
+	}
+
+	#welcome h1{
+		font-size: 100px;
+	}
+
+	#welcome p{
+		font-size: 25px;
+	}
+
+ 	#projects div > h1{
+ 		font-size: 72px;
+ 		letter-spacing: 10px;
+ 	}
+
+	#share div h1{
+		font-size: 60px;
+	}
+}
+
+@media(min-width: 1200px){
+	.logo{
+		max-height: 100%;
+		max-width: 100%;
+		position:relative;
+	}
+
+ 	.footer .row > div{
+		text-align: justify;
+	}
+}
