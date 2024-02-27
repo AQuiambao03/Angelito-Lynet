@@ -35,7 +35,7 @@
   </head>
  <body data-spy="scroll" data-target="#navBtn" data-offset="50">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top d-none d-lg-flex">
       <a href="#home" class="navbar-brand text-light">
         <span class="font-weight-bold">A</span><span> + </span><span>L</span>
       </a>
@@ -65,6 +65,42 @@
       </div>
     </nav>
 
+    <nav class="navbar navbar-expand-lg navbar-dark d-lg-none">
+      <a href="#home" class="navbar-brand text-light">
+        <span class="font-weight-bold">A</span><span> + </span><span>L</span>
+      </a>
+
+      <!-- Navbar Toggle Icon -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Content -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul id="navBtn" class="navbar-nav nav nav-pills ml-auto">
+          <li class="nav-item text-center">
+            <a href="#home" class="text-light nav-link active rounded-0 d-inline-block">Home</a>
+          </li>
+          <li class="nav-item text-center">
+            <a href="#details" class="text-light nav-link rounded-0 d-inline-block">Details</a>
+          </li>
+          <li class="nav-item text-center">
+            <a href="#gallery" class="text-light nav-link rounded-0 d-inline-block">Gallery</a>
+          </li>
+          <li class="nav-item text-center">
+            <a href="#share" class="text-light nav-link rounded-0 d-inline-block">Share</a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Back to top -->
+
+    <button type="button" class="btn btn-secondary btn-floating btn-lg rounded-circle d-lg-none" id="btn-back-to-top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
     <main class="container-fluid">
 
       <!-- Home -->
@@ -72,12 +108,12 @@
 
         <!-- Jumbotron and Welcome Screen -->
         <div class="col-12 jumbotron jumbotron-fluid text-center text-light hero-banner">
-          <div id="welcome" class="d-none d-md-block">
+          <div id="welcome" class="d-none d-lg-block">
             <h1 class="display-3 font-weight-bold" data-aos="fade-in" data-aos-easing="ease-in-sine" data-aos-duration="1000">ANGELITO + LYNET</h1>
             <p class="lead px-3" data-aos="fade-in" data-aos-easing="ease-in-sine" data-aos-duration="3000">Ikaw at Ako Habambuhay.</p>
           </div>
 
-          <div id="welcome" class="d-block d-sm-none">
+          <div id="welcome" class="d-lg-none">
             <h1 class="display-3 font-weight-bold" data-aos="fade-in" data-aos-easing="ease-in-sine" data-aos-duration="1000">Ikaw At Ako</h1>
             <p class="lead px-3" data-aos="fade-in" data-aos-easing="ease-in-sine" data-aos-duration="3000">Habambuhay.</p>
           </div>
