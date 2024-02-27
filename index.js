@@ -61,6 +61,7 @@ function readUrl(input) {
 
   if(input.files.length > 0){
     document.getElementById("upload").disabled = false;
+    document.getElementById("upload").setAttribute("class", "btn btn-outline-light btn-block")
   }
 
 }
@@ -79,10 +80,10 @@ document.getElementById('uploadForm').addEventListener('submit', async function 
   }
 
   document.getElementById("upload").innerHTML = `<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> Uploading...`
-   document.getElementById("upload").setAttribute("class", "btn btn-secondary btn-lg btn-block")
+   document.getElementById("upload").setAttribute("class", "btn btn-light btn-block")
 
-  console.log(formData);
-  console.log(files);
+  // console.log(formData);
+  // console.log(files);
 
   fetch('https://wedding-file-upload.onrender.com/', {
     method: 'POST',
@@ -90,7 +91,7 @@ document.getElementById('uploadForm').addEventListener('submit', async function 
   })
   .then(response => response.json())
   .then(data => {
-    console.log('Upload success:', data);
+    // console.log('Upload success:', data);
     if(data.message == "success"){
       document.getElementById("upload").innerHTML = "Maraming Salamat!"
       setTimeout(()=>{
@@ -102,14 +103,14 @@ document.getElementById('uploadForm').addEventListener('submit', async function 
     }
   })
   .catch(error => {
-    console.error('Upload failed:', error);
+    // console.error('Upload failed:', error);
     if(error){
       document.getElementById("upload").innerHTML = "Try Again Later!"
       setTimeout(()=>{
         document.getElementById("upload").innerHTML = "Upload"
         document.getElementById("upload").disabled = true;
         document.getElementById("inputFile").setAttribute("data-title", "Drag and drop a file");
-        document.getElementById("upload").setAttribute("class", "btn btn-outline-secondary btn-lg btn-block")
+        document.getElementById("upload").setAttribute("class", "btn btn-outline-secondary btn-block")
       }, 2000);
     }
   });
