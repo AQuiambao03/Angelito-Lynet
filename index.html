@@ -347,17 +347,44 @@
           <p class="w-75 mx-auto px-3 font-italic font-weight-thin">Sa aming mahalagang araw, nais naming humingi ng kopya ng mga larawan na iyong nakuha. Maari itong i-upload gamit ang File Uploader sa ibaba.</p>
 
           <div class="col-sm-6 offset-sm-3 mt-2" data-aos="flip-down">
-            <button type="button" class="btn btn-outline-light btn-block" onclick="document.getElementById('inputFile').click()">Add Image</button>
-            <div class="form-group inputDnD">
-              <label class="sr-only" for="inputFile">File Upload</label>
-              <input type="file" class="form-control-file text-light font-weight-bold" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drag and drop a file" multiple>
-            </div>
+            <form id="uploadForm" method="POST">
+              <button type="button" class="btn btn-outline-light btn-block" onclick="document.getElementById('inputFile').click()">Add Image</button>
+              <div class="form-group inputDnD">
+                <label class="sr-only" for="inputFile">File Upload</label>
+                <input type="file" class="form-control-file text-light font-weight-bold" id="inputFile" name="drive_files" accept="image/*" onchange="readUrl(this)" data-title="Drag and drop a file" multiple>
+              </div>
+
+              <button class="btn btn-outline-secondary btn-lg btn-block" id="upload" type="submit" disabled>
+                Upload
+              </button>
+            </form>
           </div>
         </div>
      
       </section>
 
     </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="fileLimitModal" tabindex="-1" role="dialog" aria-labelledby="fileLimitModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="fileLimitModalLabel">File Limit Exceeded</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Please select a maximum of 10 files.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <footer class="footer border-top border-color-dark px-4 hero-banner">
       <div class="row">
