@@ -75,42 +75,14 @@ body{
 	min-height: 100vh;
 }
 
-/*Effects and animations*/
-.hero-banner{
-	/* The image used */
-	background-image: url("images/hero_banner.jpg");
 
-	/* Set a specific height */
-	min-height: 100vh;
-	min-width: auto;
-
-	/* Create the parallax scrolling effect */
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-.bg-parallax{
-	/* The image used */
-	background-image: url("images/bg_parallax.jpg");
-
-	/* Set a specific height */
-	min-height: 100vh;
-
-	/* Create the parallax scrolling effect */
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
 
 #DragAndDrop {
   .form-control-file {
     position: relative;
     width: 100%;
     height: 100%;
-    min-height: 10em;
+    min-height: 6em;
     outline: none;
     visibility: hidden;
     cursor: pointer;
@@ -123,7 +95,7 @@ body{
       top: 0.5em;
       left: 0;
       width: 100%;
-      min-height: 10em;
+      min-height: 6em;
       line-height: 2em;
       padding-top: 1.5em;
       opacity: 1;
@@ -144,12 +116,35 @@ body{
 
 /*media queries*/
 @media (min-width: 320px){
-	.logo{
-		max-height: 75%;
-		max-width: 75%;
-		position:relative;
+	/*Effects and animations*/
+	.hero-banner{
+		/* The image used */
+		background-image: url("images/hero_banner.jpg");
+
+		/* Set a specific height */
+		min-height: 100vh;
+		min-width: auto;
+
+		/* Create the parallax scrolling effect */
+		background-attachment: initial;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 
+	.bg-parallax{
+		/* The image used */
+		background-image: url("images/bg_parallax.jpg");
+
+		/* Set a specific height */
+		min-height: 100vh;
+
+		/* Create the parallax scrolling effect */
+		background-attachment: initial;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
 	#welcome h1{
 		font-size: 56px;
 	}
@@ -182,10 +177,34 @@ body{
 }
 
 @media (min-width: 576px){
-	.logo{
-		max-height: 75%;
-		max-width: 75%;
-		position:relative;
+	/*Effects and animations*/
+	.hero-banner{
+		/* The image used */
+		background-image: url("images/hero_banner.jpg");
+
+		/* Set a specific height */
+		min-height: 100vh;
+		min-width: auto;
+
+		/* Create the parallax scrolling effect */
+		background-attachment: initial;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.bg-parallax{
+		/* The image used */
+		background-image: url("images/bg_parallax.jpg");
+
+		/* Set a specific height */
+		min-height: 100vh;
+
+		/* Create the parallax scrolling effect */
+		background-attachment: initial;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 
 	#welcome h1{
@@ -220,12 +239,35 @@ body{
 }
 
 @media (min-width: 768px){
-	.logo{
-		max-height: 75%;
-		max-width: 75%;
-		position:relative;
+	/*Effects and animations*/
+	.hero-banner{
+		/* The image used */
+		background-image: url("images/hero_banner.jpg");
+
+		/* Set a specific height */
+		min-height: 100vh;
+		min-width: auto;
+
+		/* Create the parallax scrolling effect */
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 
+	.bg-parallax{
+		/* The image used */
+		background-image: url("images/bg_parallax.jpg");
+
+		/* Set a specific height */
+		min-height: 100vh;
+
+		/* Create the parallax scrolling effect */
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
 	#welcome h1{
 		font-size: 64px;
 	}
@@ -249,11 +291,6 @@ body{
 }
 
 @media (min-width: 992px){
-	.logo{
-		max-height: 75%;
-		max-width: 75%;
-		position:relative;
-	}
 
 	#welcome h1{
 		font-size: 100px;
