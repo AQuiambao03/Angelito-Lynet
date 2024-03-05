@@ -75,6 +75,8 @@ body{
 	min-height: 100vh;
 }
 
+
+
 #DragAndDrop {
   .form-control-file {
     position: relative;
@@ -93,7 +95,7 @@ body{
       top: 0.5em;
       left: 0;
       width: 100%;
-      min-height: 8em;
+      min-height: 6em;
       line-height: 2em;
       padding-top: 1.5em;
       opacity: 1;

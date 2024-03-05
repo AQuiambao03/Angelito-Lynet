@@ -1,5 +1,7 @@
 //Get the button
-let mybutton = document.getElementById("btn-back-to-top");
+let myButton = document.getElementById("btn-back-to-top");
+let smallNavbar = document.getElementById("small-navbar");
+console.log(smallNavbar)
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
@@ -7,15 +9,17 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    myButton.style.display = "block";
+    smallNavbar.setAttribute("class", "navbar navbar-expand-lg navbar-dark d-lg-none");
   } 
   else {
-    mybutton.style.display = "none";
+    myButton.style.display = "none";
+    smallNavbar.setAttribute("class", "navbar navbar-expand-lg navbar-dark d-lg-none fixed-top")
   }
 }
 // When the user clicks on the button, scroll to the top of the document
-mybutton.addEventListener("click", backToTop);
+myButton.addEventListener("click", backToTop);
 
 function backToTop() {
   document.body.scrollTop = 0;
