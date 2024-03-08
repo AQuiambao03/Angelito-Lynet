@@ -346,26 +346,12 @@
           <h1 class="display-4 mt-3 mt-lg-3 font-weight-bold">Ibahagi ang mga Larawan</h1>
           <p class="w-75 mx-auto px-3 font-italic font-weight-thin">Sa aming mahalagang araw, nais naming humingi ng kopya ng mga larawan na iyong nakuha. Maari itong i-upload gamit ang File Uploader sa ibaba.</p>
 
-          <div class="col-sm-6 offset-sm-3 mt-2 d-none d-sm-block" data-aos="flip-down">
+          <div class="col-sm-6 offset-sm-3 mt-2" data-aos="flip-down">
             <form id="uploadForm" method="POST">
               <button type="button" class="btn btn-outline-light btn-block" onclick="document.getElementById('inputFile').click()">Add Image</button>
               <div id="DragAndDrop" class="form-group">
                 <label class="sr-only" for="inputFile">File Upload</label>
-                <input type="file" class="form-control-file text-light font-weight-bold" id="inputFile" name="drive_files" accept="image/*" onchange="readUrl(this)" data-title="Drag and drop images" multiple>
-              </div>
-
-              <button class="btn btn-outline-secondary btn-block" id="upload" type="submit" disabled>
-                Upload
-              </button>
-            </form>
-          </div>
-
-          <div class="col-sm-6 offset-sm-3 mt-2 d-block d-sm-none" data-aos="flip-down">
-            <form id="uploadForm" method="POST">
-              <button type="button" class="btn btn-outline-light btn-block d-none" onclick="document.getElementById('inputFile').click()">Add Image</button>
-              <div id="DragAndDrop" class="form-group">
-                <label class="sr-only" for="inputFile">File Upload</label>
-                <input type="file" class="form-control-file text-light font-weight-bold" id="inputFile" name="drive_files" accept="image/*" onchange="readUrl(this)" data-title="Tap to add images" multiple>
+                <input type="file" class="form-control-file text-light font-weight-bold" id="inputFile" name="drive_files" accept="image/*" onchange="readUrl(this)" data-title="Drag and drop a file" multiple>
               </div>
 
               <button class="btn btn-outline-secondary btn-block" id="upload" type="submit" disabled>
